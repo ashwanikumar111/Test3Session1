@@ -1,83 +1,4 @@
-
- gcc -g p3original.c
- gdb a.out
-GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from a.out...done.
- 
- gcc -g p3original.c
- ./a.out
-Enter a number n
-3
-Enter a number r
-2
-Value of 3C2 = 3
- gdb a.out
-GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
- 
- gcc -g p3original.c
- gdb a.out
-GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "x86_64-linux-gnu".
-Type "show configuration" for configuration details.
-For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
-Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
-Reading symbols from a.out...done.
-(gdb) b main
-Breakpoint 1 at 0x775: file p3original.c, line 6.
-(gdb) r
-Starting program: /home/runner/Test3Session1/a.out 
-warning: Error disabling address space randomization: Operation not permitted
-
-Breakpoint 1, main () at p3original.c:6
-6   {
- 
- gcc -g p4original.c
- ./a.out
-
-Enter degree of the polynomial X :: 5
-
-Enter coefficient's of the polynomial X :: 
-
-Enter Coefficient of [ X^5 ] :: 5
-
-Enter Coefficient of [ X^4 ] :: 4
-
-Enter Coefficient of [ X^3 ] :: 3
-
-Enter Coefficient of [ X^2 ] :: 2
-
-Enter Coefficient of [ X^1 ] :: 1
-
-Enter Coefficient of [ X^0 ] :: 0
-
-Enter the value of X :: 6
-
-Value of the polynomial is = [ 44790.000000 ]
+ gcc -g p4original.c
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -110,7 +31,7 @@ Breakpoint 1, main () at p4original.c:4
 
 9        scanf("%d",&n);
 (gdb) n
-Enter degree of the polynomial X :: 5
+Enter degree of the polynomial X :: 2
 10       printf("\nEnter coefficient's of the polynomial X :: \n");
 (gdb) n
 
@@ -122,7 +43,7 @@ Enter coefficient's of the polynomial X ::
 
 14              scanf("%f",&a[i]);
 (gdb) n
-Enter Coefficient of [ X^5 ] :: 6
+Enter Coefficient of [ X^2 ] :: 12
 11       for(i=n;i>=0;i--)
 (gdb) n
 13              printf("\nEnter Coefficient of [ X^%d ] :: ",i);
@@ -130,7 +51,7 @@ Enter Coefficient of [ X^5 ] :: 6
 
 14              scanf("%f",&a[i]);
 (gdb) n
-Enter Coefficient of [ X^4 ] :: 2
+Enter Coefficient of [ X^1 ] :: 13
 11       for(i=n;i>=0;i--)
 (gdb) n
 13              printf("\nEnter Coefficient of [ X^%d ] :: ",i);
@@ -138,31 +59,7 @@ Enter Coefficient of [ X^4 ] :: 2
 
 14              scanf("%f",&a[i]);
 (gdb) n
-Enter Coefficient of [ X^3 ] :: 3
-11       for(i=n;i>=0;i--)
-(gdb) n
-13              printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-14              scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^2 ] :: 2
-11       for(i=n;i>=0;i--)
-(gdb) n
-13              printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-14              scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^1 ] :: 1
-11       for(i=n;i>=0;i--)
-(gdb) n
-13              printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-14              scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^0 ] :: 0
+Enter Coefficient of [ X^0 ] :: 11
 11       for(i=n;i>=0;i--)
 (gdb) n
 17       printf("\nEnter the value of X :: ");
@@ -170,19 +67,7 @@ Enter Coefficient of [ X^0 ] :: 0
 
 18       scanf("%f",&x);
 (gdb) n
-Enter the value of X :: 6
-20       for(i=n;i>0;i--)
-(gdb) n
-22          sum=(sum+a[i])*x;
-(gdb) n
-20       for(i=n;i>0;i--)
-(gdb) 
-22          sum=(sum+a[i])*x;
-(gdb) n
-20       for(i=n;i>0;i--)
-(gdb) n
-22          sum=(sum+a[i])*x;
-(gdb) n
+Enter the value of X :: 2
 20       for(i=n;i>0;i--)
 (gdb) n
 22          sum=(sum+a[i])*x;
@@ -198,7 +83,7 @@ Enter the value of X :: 6
 27       printf("\nValue of the polynomial is = [ %f ]\n",sum);
 (gdb) n
 
-Value of the polynomial is = [ 49974.000000 ]
+Value of the polynomial is = [ 85.000000 ]
 29       return 0;
 (gdb) n
 30  }(gdb)
